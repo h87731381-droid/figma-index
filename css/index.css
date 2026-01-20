@@ -1,0 +1,199 @@
+@import url('./reset.css');
+@import url('./common.css');
+
+/* 공통스타일 */
+html {font-size: 16px;} /* 원래 body에 둬야하는데 rem 때문에 따로 추가한다. */
+body {color: #555;}
+
+.title {}
+.title >h2 {
+    font-size: 40px;
+    color: black;
+}
+.title >p {
+    padding-top: 10px;
+    color: #555;
+}
+
+
+/*------------------------------------
+------------------header---------------*/
+
+header {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+}
+
+header >div {
+    width: 1300px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header >div >h1 {
+    font-size: 20px; /* h1에는 기본적으로 갖고있는 스타일이 있어 지정해야함 */
+}
+header >div >h1 >a {
+    color: white;
+}
+
+header >div >nav {
+}
+header >div >nav >a {
+    color: white;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+
+
+
+/* 인덱스 페이지 내용 */
+
+/*------------------------------------
+------------------main top---------------*/
+
+.spot {
+    width: 100%;
+    height: 100vh;
+    background: url('../imgs/img_main.jpg') 0 0 / cover no-repeat;
+    text-align: right;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.spot>div {
+    color: white;
+    width: 500px;
+}
+.spot>div >b {
+    font-size: 64px;
+}
+.spot>div >p {
+    font-size: 16px;
+    padding: 10px 0 30px;
+}
+.spot>div >a {
+    color: inherit;
+    background-color: #A78E60;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+
+
+/*------------------------------------
+------------------about---------------*/
+
+.about {
+    text-align: center;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+}
+.about .about-2 {
+    display: flex;
+    justify-content: space-between;
+}
+.about .title,
+.about .about-2 {
+    margin: 70px 0;
+}
+
+.about .about-2 >figure {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 32%;
+}
+.about .about-2 >figure >p {
+    background-color: #A78E60;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.5s;
+}
+.about .about-2 >figure >p:hover {
+    border-radius: 15%;
+    background-color: green;
+}
+.about .about-2 >figure >p img {}
+
+.about .about-2 >figure >figcaption >b {
+    text-transform: uppercase;
+    color: black;
+}
+.about .about-2 >figure >figcaption >p {}
+
+
+
+/*------------------------------------
+------------------protfolio---------------*/
+
+.portfolio {
+    text-align: center;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.portfolio .title >h2 {text-transform: uppercase;}
+.portfolio .contents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio .title,
+.portfolio .contents {
+    width:1300px; margin:50px 0 0 0;
+}
+
+.portfolio .contents >figure {
+    flex: 0 0 32%; /* width:30%; | flex-grow: 0; flex-shrink: 0; flex-basis: 32%; */
+    margin-bottom: 2%; /* 부모의 전체 크기 중 2% */
+}
+.portfolio .contents >figure >p {
+    height: 300px;
+    overflow: hidden;
+}
+.portfolio .contents >figure >p img {
+    width:100%; /* figure와 p는 블록요소이며, 부모 크기 상속 O, img는 iline태그이며, 부모의 크기 상속 X */
+    transition: 0.5s;
+}
+.portfolio .contents >figure:hover >p img {
+    transform: scale(1.2);
+}
+.portfolio .contents >figure >figcaption {}
+.portfolio .contents >figure >figcaption >b {}
+.portfolio .contents >figure >figcaption >p {}
+
+
+
+
+/*------------------------------------
+------------------contact---------------*/
+
+.contact {
+    text-align: center;
+    background-color: #A78E60;
+    padding: 100px 0;
+    text-transform: uppercase;
+}
+.contact h2,
+.contact p {color: white;}
+
+.contact .contents {
+    width: 1300px;
+    margin: 60px auto 0 auto;
+}
